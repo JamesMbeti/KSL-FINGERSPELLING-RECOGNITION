@@ -1,5 +1,5 @@
 # KSL-FINGERSPELLING-RECOGNITION
-![ksl image2](https://github.com/JamesMbeti/KSL-FINGERSPELLING-RECOGNITION/blob/main/WhatsApp%20Image%202023-07-13%20at%2010.17.33.jpeg)
+blob:https://web.whatsapp.com/f62bae78-755c-4f34-adeb-ec3066329ac1
 
 ##### Contributors: [James Mbeti](https://github.com/JamesMbeti) , [Taylor Musa](https://github.com/ojutaylor), [Brian Kisilu](https://github.com/Bkitainge), [Sharon Kimani](https://github.com/Sharonkimani), [Nelson Odhiambo](https://github.com/mandelaGit), [Vivian Adhiambo](https://github.com/vivianOpondo)
 
