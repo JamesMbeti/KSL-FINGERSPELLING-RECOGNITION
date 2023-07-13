@@ -1,5 +1,5 @@
 # KSL-FINGERSPELLING-RECOGNITION
-![hottest-ZIP-codes-ranked](https://github.com/JamesMbeti/KSL-FINGERSPELLING-RECOGNITION/blob/main/WhatsApp%20Image%202023-07-13%20at%2010.17.33.jpeg)
+![ksl image](https://github.com/JamesMbeti/KSL-FINGERSPELLING-RECOGNITION/blob/main/WhatsApp%20Image%202023-07-13%20at%2010.17.33.jpeg)
 
 ##### Contributors: [James Mbeti](https://github.com/JamesMbeti) , [Taylor Musa](https://github.com/ojutaylor), [Brian Kisilu](https://github.com/Bkitainge), [Sharon Kimani](https://github.com/Sharonkimani), [Nelson Odhiambo](https://github.com/mandelaGit), [Vivian Adhiambo](https://github.com/vivianOpondo)
 
@@ -92,6 +92,6 @@ Our success metrics is accuracy. The model that had the highest accuracy for the
 * The dataset could be expanded to include more images of fingerspelling gestures, which would improve the accuracy of the model.
 * The images in the dataset could be improved in terms of quality, which would also improve the accuracy of the model.
 * The model could be extended to recognize fingerspelling for other letters and words, which would make it more versatile.
-
+* The model could be integrated with other technologies, such as speech recognition, to provide a more comprehensive communication solution for deaf and hard of hearing individuals.
 
 
