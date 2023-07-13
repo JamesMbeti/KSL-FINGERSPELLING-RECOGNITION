@@ -1,5 +1,5 @@
 # KSL-FINGERSPELLING-RECOGNITION
-blob:https://web.whatsapp.com/f62bae78-755c-4f34-adeb-ec3066329ac1
+https://techguy.co.ke/requirements-to-enroll-for-a-sign-language-course-in-kenya/
 
 ##### Contributors: [James Mbeti](https://github.com/JamesMbeti) , [Taylor Musa](https://github.com/ojutaylor), [Brian Kisilu](https://github.com/Bkitainge), [Sharon Kimani](https://github.com/Sharonkimani), [Nelson Odhiambo](https://github.com/mandelaGit), [Vivian Adhiambo](https://github.com/vivianOpondo)
 
