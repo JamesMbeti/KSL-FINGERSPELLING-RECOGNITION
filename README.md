@@ -13,9 +13,7 @@
 
 ## 1. Business Understanding
 ### Overview
-Fingerspelling is a technique that makes use of hand formations to represent words and letters. Using fingerspelling, one can communicate information such as phone numbers, names, and even addresses. However, hearing impaired individuals find it difficult to merge the current technological advancements, such as, smartphones with fingerspelling because they happen to do it a lot faster than their devices. Therefore, there is need to bridge the gap between fingerspelling and typing on smartphones.
-
-Fingerspelling has grown to become one of the most crucial manual communication systems in the world. For deaf and individuals with hearing impairment issues, fingerspelling is one of the ways that they can communicate with those around them. However, few people are able to discern figerspelling and this leads to communication breakdowns. The use of machine learning technology can help to merge fingerspelling with exact letters and symbols to help enhance communication.
+Fingerspelling, a technique that utilizes hand formations to represent words and letters, plays a vital role in communication for individuals who are deaf or hard of hearing. However, merging this manual communication method with modern technology, such as smartphones, poses challenges as fingerspelling is typically faster than device recognition. Bridging this gap between fingerspelling and smartphone typing is crucial to improve communication accessibility.
 
 ### Problem Statement
 
@@ -35,14 +33,23 @@ The deaf and hearing impaired community faces significant communication barriers
 * Deploy the model.
 
 ## 2. Data Understanding
+
+The dataset used in this project consists of fingerspelling gesture images in Kenyan Sign Language (KSL). The dataset is a combination of a publicly available Kaggle dataset and a custom dataset collected specifically for this project.
+
 > kaggle dataset
+
 * The dataset is publicly available on [Kaggle](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) 
 * The signs provided are based on the Kenyan Sign Language letter database which is made up of 24 classes of letters with the exclusion of J and Z. The two letters have been excluded because they require the use of motion.
+* This dataset provided a foundational resource for the project's fingerspelling recognition model.
+  
 
+ 
 
 > Raw dataset
 
-
+*To augment the Kaggle dataset and address potential limitations, the project team conducted a separate data collection effort. 
+*The custom dataset was collected by the project team themselves, involving the capture of high-quality images of fingerspelling gestures in KSL. 
+*This custom dataset aimed to provide a more comprehensive and diverse set of fingerspelling gesture images for training and evaluation.
 
 
 ------
