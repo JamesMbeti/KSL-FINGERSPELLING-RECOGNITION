@@ -36,7 +36,7 @@ The deaf and hearing impaired community faces significant communication barriers
 
 ## 2. Data Understanding
 > kaggle dataset
-* The dataset is publicly available on Kaggle 
+* The dataset is publicly available on [Kaggle](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) 
 * The signs provided are based on the Kenyan Sign Language letter database which is made up of 24 classes of letters with the exclusion of J and Z. The two letters have been excluded because they require the use of motion.
 
 
