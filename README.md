@@ -1,2 +1,0 @@
-# KSL-FINGERSPELLING-RECOGNITION
-<img src="ksl.png" />
