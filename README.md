@@ -71,12 +71,27 @@ The models include;
 ## 5. Evaluation 
 Our success metrics is accuracy. The model that had the highest accuracy for the validation set was chosen to be the best model and thus used to predict the fingerspelling images.
 
-## 6. Conclusions
 
+----
+## 6. Challenges
 
+* The dataset was relatively small, which could have limited the accuracy of the model.
+* The images in the dataset were not of uniform quality, which could have also affected the accuracy of the model.
+* The hand gestures in the dataset were limited to the 24 letters of the Kenyan Sign Language, which means that the model would not be able to recognize fingerspelling for other letters or words.
+  
+-----
+## 7. Conclusions
 
-
+* Despite the challenges, the model was able to achieve a high accuracy of above 90% on the test dataset.
+* The model could be used to improve communication for deaf and hard of hearing individuals, as it would allow them to communicate more easily with people who do not know sign language.
 
 ---
 
-## 7. Recommendations
+## 8. Recommendations
+
+* The dataset could be expanded to include more images of fingerspelling gestures, which would improve the accuracy of the model.
+* The images in the dataset could be improved in terms of quality, which would also improve the accuracy of the model.
+* The model could be extended to recognize fingerspelling for other letters and words, which would make it more versatile.
+
+
+
