@@ -47,9 +47,9 @@ The dataset used in this project consists of fingerspelling gesture images in Ke
 
 > Raw dataset
 
-*To augment the Kaggle dataset and address potential limitations, the project team conducted a separate data collection effort. 
-*The custom dataset was collected by the project team themselves, involving the capture of high-quality images of fingerspelling gestures in KSL. 
-*This custom dataset aimed to provide a more comprehensive and diverse set of fingerspelling gesture images for training and evaluation.
+* To augment the Kaggle dataset and address potential limitations, the project team conducted a separate data collection effort. 
+* The custom dataset was collected by the project team themselves, involving the capture of high-quality images of fingerspelling gestures in KSL. 
+* This custom dataset aimed to provide a more comprehensive and diverse set of fingerspelling gesture images for training and evaluation.
 
 
 ------
