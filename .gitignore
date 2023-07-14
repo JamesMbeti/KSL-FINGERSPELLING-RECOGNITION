@@ -162,5 +162,3 @@ cython_debug/
 #ignoring csv files
 *.csv
 #ignoring pictures
-*.jpeg
-*.jpg
