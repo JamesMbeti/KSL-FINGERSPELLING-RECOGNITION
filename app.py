@@ -304,8 +304,8 @@ if app_mode == 'About App':
     st.image(cover_image, width=750)
     st.markdown(
                 '<span style="color: #154360;"> **Fingerspelling** </span>' 
-                'is a technique that makes use of hand formations to'
-                'represent words and letters and through it one can communicate' 
+                'is a technique that makes use of hand formations to '
+                'represent words and letters and through it one can communicate ' 
                 'information such as phone numbers, names, and even addresses.', unsafe_allow_html=True)
     
     st.markdown("""This is one of the ways that deaf and those with hearing impairement issues
