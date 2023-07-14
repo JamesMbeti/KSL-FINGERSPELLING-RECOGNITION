@@ -29,8 +29,9 @@ best_model = "best_model.h5"
 st.set_page_config(page_title="The ODA Clan", page_icon="👽", layout="wide",
                    initial_sidebar_state="expanded")
 
+
 #load assets
-cover_image = Image.open("fingerspell.jpeg")
+cover_image = Image.open("cover.png")
 DEMO_IMAGE = 'WhatsApp Image 2023-07-08 at 11.08.15.jpeg'
 DEMO_VIDEO = "WhatsApp Video 2023-07-11 at 12.40.11.mp4"
 
@@ -214,8 +215,51 @@ def predict_word(img_array):
     predicted_word = "".join(predicted_word_series.values)
     return predicted_word.capitalize()
 
+@st.cache_data
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-st.title('KSL HAND GESTURE RECOGNITION')
+
+img = get_img_as_base64("background_image.jpeg")
+main_img = get_img_as_base64("background_image.jpeg")
+
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+    background-image: url("data:image/png;base64,{main_img}");
+    background-size: 180%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: transparent;
+    
+}}
+
+[data-testid="stSidebar"] > div:first-child {{
+    background-image: url("data:image/png;base64,{img}");
+    background-position: top left; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+    
+}}
+
+[data-testid="stHeader"] {{
+    background: rgba(0,0,0,0);
+}}
+
+[data-testid="stToolbar"] {{
+    right: 2rem;
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+st.markdown('<h1 style="color: #154360;">KSL HAND GESTURE RECOGNITION</h1>',
+            unsafe_allow_html=True)
 
 st.markdown(
     """
@@ -231,7 +275,8 @@ st.markdown(
 """,
 unsafe_allow_html=True)
 
-st.sidebar.title('KSL HAND RECOGNITION SIDEBAR')
+st.sidebar.markdown('<h1 style="color: #154360;">KSL HAND GESTURE RECOGNITION</h1>',
+                    unsafe_allow_html=True)
 st.sidebar.subheader('Parameters')
 
 @st.cache
@@ -257,6 +302,14 @@ app_mode = st.sidebar.selectbox("Choose the app mode",
 
 if app_mode == 'About App':
     st.image(cover_image, width=750)
+    st.markdown(
+                '<span style="color: #154360;"> **Fingerspelling** </span>' 
+                'is a technique that makes use of hand formations to'
+                'represent words and letters and through it one can communicate' 
+                'information such as phone numbers, names, and even addresses.', unsafe_allow_html=True)
+    
+    st.markdown("""This is one of the ways that deaf and those with hearing impairement issues
+                communicate with those around them.""")
     st.markdown("""
                 This application offers an interface that allows the conversion of
                  Kenya Sign Language **KSL** fingerspells to their appropriate alphabets.
@@ -319,7 +372,7 @@ elif app_mode == 'Feedback':
     </style>
 
     <div class="contact-form">
-        <form action="https://formsubmit.co/briankitainge@gmail.com" method="POST">
+        <form action="https://formsubmit.co/theodaclan9@gmail.com" method="POST">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required>
             <label for="email">Email</label>
@@ -357,12 +410,20 @@ elif app_mode == 'Run on image':
         st.sidebar.image(image)
 
 elif app_mode == 'Run on video':
-    st.title("video Prediction")
+    st.title("Video Prediction")
     st.write("Upload a video for prediction")
-    interval_time = st.number_input("The interval Between signs", min_value=0.5)
-    start = st.number_input("The video starts")
-    end = st.number_input("The video ends")
-    uploaded_video = st.file_uploader("Upload a video", type=["mp4", "avi", "mov"])
+    pace = st.selectbox("Select the pace you're comfortable with",
+                        ["Slow Paced", "Medium Paced", "Fast Paced"])
+    
+    st.markdown('<span style="color: red;">_HINT_:</span> '
+            '_Slow paced - 20 signs per minute, \n' 
+            'Medium paced - 30 signs per minute, \n'
+            'Fast paced - 60 signs per minute_', unsafe_allow_html=True)
+    
+    start = 1
+    end = 60
+
+    uploaded_video = st.file_uploader("Upload a video - (limit 1 min)", type=["mp4", "avi", "mov"])
   
     if uploaded_video is not None:
         video_uploaded = uploaded_video.read()
@@ -376,13 +437,31 @@ elif app_mode == 'Run on video':
         video_path = "./uploaded_video.mp4"
         with open(video_path, "wb") as video_writer:
             video_writer.write(video_uploaded)
-        video_image_arrays = extract_frames_from_video(video_path=video_path, start_time=start,
-                                                       end_time=end, interval=interval_time)
-        processed_images = preprocess_video_images(video_image_arrays)
-        if st.button("Predict"):
-            predicted_word = predict_word(processed_images)
-            st.write("Predicted Word: ", predicted_word)
-
+        
+        if pace == "Slow Paced":
+            interval_time = 3
+            video_image_arrays = extract_frames_from_video(video_path=video_path, start_time=start,
+                                                        end_time=end, interval=interval_time)
+            processed_images = preprocess_video_images(video_image_arrays)
+            if st.button("Predict"):
+                predicted_word = predict_word(processed_images)
+                st.write("Predicted Word: ", predicted_word)
+        elif pace == "Medium Paced":
+            interval_time = 2
+            video_image_arrays = extract_frames_from_video(video_path=video_path, start_time=start,
+                                                        end_time=end, interval=interval_time)
+            processed_images = preprocess_video_images(video_image_arrays)
+            if st.button("Predict"):
+                predicted_word = predict_word(processed_images)
+                st.write("Predicted Word: ", predicted_word)
+        elif pace == "Fast Paced":
+            interval_time = 1
+            video_image_arrays = extract_frames_from_video(video_path=video_path, start_time=start,
+                                                        end_time=end, interval=interval_time)
+            processed_images = preprocess_video_images(video_image_arrays)
+            if st.button("Predict"):
+                predicted_word = predict_word(processed_images)
+                st.write("Predicted Word: ", predicted_word)
     else:
         st.write("No video file uploaded.")
 
