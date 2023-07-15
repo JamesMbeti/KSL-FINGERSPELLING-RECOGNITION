@@ -58,7 +58,7 @@ def video_capture():
 
     #getting the detector
     detector = hd(maxHands=1)
-    classifier = Classifier("keras_model.h5", "labels.txt")
+    classifier = Classifier("keras_model_best.h5", "labels_best.txt")
 
     #helps to ensure there's enough space for the gestures
     offset = 20
