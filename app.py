@@ -158,7 +158,6 @@ def extract_frames_from_video(video_path, start_time, end_time, interval):
     frame_interval = int(interval * fps)
      # Set starting frame
     cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
-     # Initialize variables
     frame_count = 0
     current_frame = start_frame
     while current_frame <= end_frame:
@@ -166,11 +165,8 @@ def extract_frames_from_video(video_path, start_time, end_time, interval):
         ret, frame = cap.read()
         if not ret:
             break
-         # Save frame as an image
-
+        
         if frame_interval != 0 and frame_count % frame_interval == 0:
-             # image_path = f"{output_folder}/frame_{current_frame}.jpg"
-             # cv2.imwrite(image_path, frame)
             array = img_to_array(frame)
             img_arrays.append(array/255)
          # Update variables
