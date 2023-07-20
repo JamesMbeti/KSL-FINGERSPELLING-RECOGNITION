@@ -8,7 +8,7 @@ flatbuffers>=2.0
 matplotlib
 protobuf>=3.11,<4.0.0
 sounddevice>=0.4.4
-opencv-python==4.8.0.74
+opencv-python-headless
 pandas==2.0.2
 Pillow==9.5.0
 mediapipe==0.10.1
