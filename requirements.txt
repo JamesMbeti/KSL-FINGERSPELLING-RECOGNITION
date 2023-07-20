@@ -6,7 +6,6 @@ absl-py
 attrs>=19.1.0
 flatbuffers>=2.0
 matplotlib
-opencv-python-headless
 protobuf>=3.11,<4.0.0
 sounddevice>=0.4.4
 opencv-python==4.8.0.74
